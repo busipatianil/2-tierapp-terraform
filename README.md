@@ -1,6 +1,6 @@
 # 2-tierapp-terraform
 
-=================AWC -CLI INSTALL==================
+================= AWC -CLI INSTALL ==================
 
 Step1: Update package Lists by using below command
      
@@ -42,21 +42,23 @@ Notice:You will be prompted to enter your AWS Access Key ID, AWS Secret Access K
      
 	 aws iam list-users
 
-==============================Terraform Installation====================
+==================Terraform Installation===============
+
 step1: Go to official website
      
-	 https://developer.hashicorp.com/terraform/install#linux 
+       https://developer.hashicorp.com/terraform/install#linux 
 
 step2:copy the Version link for install 
      
-	 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+     wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
      sudo apt update && sudo apt install terraform  
 	 
 step3: Check if Terraform is successfully installed
      
 	  terraform -v 
-======================components deployed ========================================
+================ components deployed ====================
+
 VPC
 Internet Gateway
 Public and Private Subnets (across two AZs)
@@ -65,7 +67,9 @@ Security Groups (for ALB, EC2, RDS)
 Application Load Balancer (ALB)
 Two EC2 Instances (Nginx Web Servers)
 RDS MySQL Instance (Private)
-============project structure====================================================
+
+============ project structure ===============
+
 ├── provider.tf
 
 ├── vpc.tf
@@ -75,7 +79,9 @@ RDS MySQL Instance (Private)
 ├── ec2.tf
 
 ├── db.tf
+
 ==============terraform commands===========
+
 1.terraform init
 
 2.terraform validate
@@ -83,7 +89,3 @@ RDS MySQL Instance (Private)
 3.terraform plan
 
 4.terraform apply
-
-
-
-
