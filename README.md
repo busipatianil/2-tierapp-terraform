@@ -30,6 +30,7 @@ Step6: Configure AWS CLI by using below command
 Notice:You will be prompted to enter your AWS Access Key ID, AWS Secret Access Key, Default region name, and Default output format. If you do not have these credentials, you can obtain them from the AWS Identity and Access Management (IAM) service.
 
 ======Commands Frequently Used in AWS CLI======
+
 1.to check s3 buckets
      
 	 aws s3 ls
